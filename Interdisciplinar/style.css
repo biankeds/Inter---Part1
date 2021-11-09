@@ -1,0 +1,418 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.tech {
+  color: #d859e9;
+}
+
+.simples {
+  color: #1cabf1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background: #21222c;
+  height: 11vh;
+} 
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 2px;
+  margin-left: 32px;
+}
+
+.início {
+  color: #1cabf1;
+}
+
+.sobre {
+  color: #d859e9;
+}
+
+.história {
+  color: #2dc570;
+}
+
+.conteúdos {
+  color: #764dbf;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+  body {
+      overflow: hidden;
+  }
+  .nav-list {
+      position: absolute;
+      top: 8vh;
+      right: 0;
+      width: 50vw;
+      height: 92vh;
+      background: #21222c;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+  }
+  .nav-list li {
+      margin-left: 0;
+      opacity: 0;
+  }
+  .mobile-menu {
+      display: block;
+  }
+}
+
+.nav-list.active {
+  transform: translateX(0);
+  
+}
+
+@keyframes navLinkFade {
+  from {
+      opacity: 0;
+      transform: translateX(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}    
+
+.sobre li {
+  list-style: none;
+}
+
+.IA {
+  display: block;
+  max-width: 100%;
+}
+
+.main {
+  width: 100%;
+  height: 470px;
+  background: url(./img/eba.png) no-repeat center center;
+  background-color: #21222c;
+}
+
+.main h1 {
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-align: left;
+  margin-left: 18px;
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+
+.texto-main {
+  margin-left: 12px;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 19px;
+  line-height: 24px;
+}
+
+section {
+  padding: 3rem 0;
+  background-color: #21222c;
+}
+ 
+.categoria {
+  font-size: 0.87rem;
+  line-height: 1.5;
+  display: block;
+  font-family: 'Fira Code', monospace;
+  color: #adacac;
+  text-transform: uppercase;
+  letter-spacing: .3125rem;
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.25rem;
+  line-height: 1.333;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cor1 {
+  color: #d859e9;
+}
+
+.cor2 {
+  color: #1cabf1;
+}
+
+.intro-container {
+  width: 960px;
+  margin: auto;
+}
+
+.intro-container p {
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 38.3125rem;
+}
+
+.conteudo {
+  display: table;
+}
+
+.imagem1 {
+  display: table-cell;
+  float: left;
+}
+
+.texto-oqia {
+  display: table-cell;
+  float: left;
+  width: 510px;
+  margin-top: 87px;
+  margin-left: 50px;
+}
+
+.historia-ia {
+  padding: 3rem 0;
+  background-color: #282a36;
+}
+
+.container {
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.container {
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 990px;
+  text-align: center;
+}
+
+.title1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.25rem;
+  line-height: 1.333;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.texto-his-ia {
+  margin-bottom: 1.70rem;
+}
+
+.historia-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-content: stretch;
+}
+
+.box {
+  padding: 3rem 3rem 2rem 3rem;
+  background: #21222c;
+  border: 0.0625rem solid #2dc570;
+  border-radius: 0.3125rem;
+  box-sizing: border-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: center;
+}
+
+.box span {
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 38.3125rem;
+  text-align: center;
+}
+
+.his-verde {
+  color: #2dc570;
+}
+
+.como-funciona {
+  background: #21222c;
+  padding: 3rem 0;
+}
+.container {
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 990px;
+  text-align: center;
+}
+
+.container img {
+  margin-top: 2rem;
+  border: 0.0625rem solid #1cabf1;
+  border-radius: 1.3125rem;
+}
+
+.container1 {
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.5;
+  padding: 1.70rem 3rem;
+  text-align: left;
+}
+
+.subtitulo1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.25rem;
+  line-height: 1.333;
+  color: #1cabf1;
+  margin-top: 15px;
+}
+
+.subtitulo2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.25rem;
+  line-height: 1.333;
+  color: #1cabf1;
+  margin-top: 25px;
+}
+
+.objetivo-ia {
+ background: #282a36;
+}
+
+.objetivo-container {
+  padding: 1rem;
+}
+
+.title2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.15rem;
+  line-height: 1.333;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  
+}
+
+.objetivo-container p {
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 38.3125rem;
+}
+
+.imagem2 {
+  display: table-cell;
+  float: left;
+  margin-left: 35px;
+}
+
+.texto-obj {
+  display: table-cell;
+  float: left;
+  width: 700px;
+  margin-top: 90px;
+}
+
+.tipos-ia {
+  background: #21222c;
+  padding: 3rem 0;
+}
+
+.title3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.15rem;
+  line-height: 1.333;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+  
+}
+
+.texto-tiposia {
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.5;
+  padding: 1.70rem 3rem;
+  text-align: center;
+}
+
+.vantagem-ia {
+  background: #282a36;
+  padding: 3rem 0;
+}
